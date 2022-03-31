@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <div>
+            <pre style="color: rgb(9, 71, 71); font-size: 20px;">
+              
+                This keyword points to the current object(points to global object which is window object)
+
+                let obj={
+                    name: "Tom",
+                    age:20,
+    
+                    printName:function(){
+                        console.log(`His name is ${this.name} and age is ${this.age}`)
+                    }
+                }
+
+                Call Bind and Apply are different ways to invoke a function. The first parameter is always 
+                an obj.
+
+                In Call the function methood is borrowed & is passed in form of Argument,
+                In Apply the function methood is borrowed & is passed in form of Array,
+                whereas In Bind borrows the function method and passes the object as an argument
+                and returns a new function
+
+                let obj={
+                    name:"Mike",
+                    age:25
+                }
+                
+                
+                function print(salary)
+                {
+                    console.log(${this.name} is getting ${salary});
+                }
+                
+                
+                print.call(obj,$50000);
+                print.apply(obj,[$60000]);
+                
+                let printdata=print.bind(obj)
+                
+                printdata($45000);
+
+                Prototype is a mechanism used to inherit features between objects.
+                When ever we create a object it is always attached with a  
+                Object prototype which has some hidden properities.
+
+                let arr = [];
+                Object.prototype //Parent
+
+                arr.__proto__ : (array properties)
+
+                arr.__proto__.__proto__ : (returns Object.prototype Properites)
+
+                arr.__proto__.__proto__.__proto__ :(returns null)
+
+
+
+
+
+
+
+
+            </pre>
+        </div>
+    </div>
+</body>
+</html>
